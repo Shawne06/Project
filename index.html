@@ -8,8 +8,65 @@
     </head>
     <body>
         <a-scene>
+            <a-assets>
+                <img
+                id="tile-base"
+                src="assets/Tiles_066_basecolor.png"
+                >
+                <img
+                id="tile-normal"
+                src="assets/Tiles_066_normal.png"
+                >
+                <img
+                id="tile-ambient-occlusion"
+                src="assets/Tiles_066_ambientOcclusion.png"
+                >
+                <img
+                id="wall-normal"
+                src="assets/Brick_Wall_024_normal.png"
+                >
+                <img
+                id="wall-base"
+                src="assets/Brick_Wall_024_basecolor.png"
+                >
+                <img
+                id="wall-ambient-occlusion"
+                src="assets/Brick_Wall_024_ambientOcclusion.png"
+                >
+                <img
+                id="roof-normal"
+                src="assets/Roof_Tiles_Copper_001_normal.jpg"
+                >
+                <img
+                id="roof-base"
+                src="assets/Roof_Tiles_Copper_001_basecolor.jpg"
+                >
+                <img
+                id="roof-ambient-occlusion"
+                src="assets/Roof_Tiles_Copper_001_ambientOcclusion.jpg"
+                >
+                <img
+                id="ground-ambient-occlusion"
+                src="assets/Ground_Forest_002_ambientOcclusion.jpg"
+                >
+                <img
+                id="ground-base"
+                src="assets/Ground_Forest_002_baseColor.jpg"
+                >
+                <img
+                id="ground-normal"
+                src="assets/Ground_Forest_002_normal.jpg"
+                >
+
+            </a-assets>
             <a-plane
-                color="forestgreen"
+                material="
+                    src: #ground-base;
+                    repeat: 500 500;
+                    ambientOcclusionMap: #ground-ambient-occlusion;
+                    ambientOcclusionTextureRepeat: 500 500;
+                    normalMap: #ground-normal;
+                    normalTextureRepeat: 500 500" 
                 position="0 0 0"
                 rotation="-90 0 0"
                 width="500"
@@ -22,7 +79,13 @@
             </a-sky>
 <a-mixin
     id="wallcolor"
-    color="lightsteelblue"
+    material="
+        src: #wall-base;
+        repeat: 5 5;
+        ambientOcclusionMap: #wall-ambient-occlusion;
+        ambientOcclusionTextureRepeat: 5 5;
+        normalMap: #wall-normal;
+        normalTextureRepeat: 5 5" 
 >
 </a-mixin>
 <a-box
@@ -52,22 +115,8 @@
     depth="0.1"
 >
 </a-box>
-<a-box
-    color="tan"
-    position="0 0 -11"
-    width="10"
-    depth="10"
-    height="0.1"
->
-</a-box>
-<a-box
-    color="darkgray"
-    position="0 3 -11"
-    width="12"
-    depth="12"
-    height="0.25"
->
-</a-box>
+
+
 <a-box
     mixin="wallcolor"
     position="-2.875 1.5 -6"
@@ -96,7 +145,13 @@
 >
 </a-box>
 <a-box
-    color="tan"
+    material="
+        src: #tile-base;
+        repeat: 10 10;
+        ambientOcclusionMap: #tile-ambient-occlusion;
+        ambientOcclusionTextureRepeat: 10 10;
+        normalMap: #tile-normal;
+        normalTextureRepeat: 10 10" 
     position="0 0 -11"
     width="10"
     depth="10"
@@ -104,7 +159,13 @@
 >
 </a-box>
 <a-box
-    color="darkgray"
+   material="
+        src: #roof-base;
+        repeat: 12 12;
+        ambientOcclusionMap: #roof-ambient-occlusion;
+        ambientOcclusionTextureRepeat: 12 12;
+        normalMap: #roof-normal;
+        normalTextureRepeat: 12 12" 
     position="0 3 -11"
     width="12"
     depth="12"
