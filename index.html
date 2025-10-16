@@ -8,19 +8,7 @@
     </head>
     <body>
         <a-scene>
-            <a-asset-item
-                id="Helicopter"
-                src="assets/Helicopter.glb"
-            >
-            <a-asset-item
-                id="Ambulance"
-                src="assets/Ambulance.glb"
-            >
-            <a-asset-item
-                id="HRoom"
-                src="assets/HRoom.glb"
-            >
-</a-asset-item>
+           
             <a-assets>
                 <img
                 id="tile-base"
@@ -70,7 +58,19 @@
                 id="ground-normal"
                 src="assets/Ground_Forest_002_normal.jpg"
                 >
-
+                 <a-asset-item
+                id="Helicopter"
+                src="assets/Helicopter.glb"
+            ></a-asset-item>
+            <a-asset-item
+                id="Ambulance"
+                src="assets/Ambulance.glb"
+            ></a-asset-item>
+            <a-asset-item
+                id="HRoom"
+                src="assets/HRoom.glb"
+            >
+</a-asset-item>
             </a-assets>
             <a-plane
                 material="
@@ -197,18 +197,18 @@ width="25"
     position="-1.0 3 -10"
     rotation="0 45 0"
     scale="0.3 0.3 0.3"
->
+></a-entity>
 <a-entity
     gltf-model="#Ambulance"
-    position="-10.0 0 -10"
-    rotation="0 45 0"
-    scale="0.3 0.3 0.3"
->
+    position="-10 1.6 -10"
+    rotation="0 0 0"
+    scale="0.025 0.025 0.025"
+></a-entity>
 <a-entity
     gltf-model="#HRoom"
-    position="-1.0 0 -10"
-    rotation="0 45 0"
-    scale="0.3 0.3 0.3"
+    position="-4.5 0 -15.5"
+    rotation="0 0 0"
+    scale="0.03 0.03 0.03"
 >
 </a-entity>
         </a-scene>
