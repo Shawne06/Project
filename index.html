@@ -8,6 +8,19 @@
     </head>
     <body>
         <a-scene>
+            <a-asset-item
+                id="Helicopter"
+                src="assets/Helicopter.glb"
+            >
+            <a-asset-item
+                id="Ambulance"
+                src="assets/Ambulance.glb"
+            >
+            <a-asset-item
+                id="HRoom"
+                src="assets/HRoom.glb"
+            >
+</a-asset-item>
             <a-assets>
                 <img
                 id="tile-base"
@@ -175,10 +188,29 @@
 <a-text
 value="HOSPITAL"
 color="red"
-position="-2 3.5 -6"
+position="0 3.5 -6"
 width="25"
 >
 </a-text>
+<a-entity
+    gltf-model="#Helicopter"
+    position="-1.0 3 -10"
+    rotation="0 45 0"
+    scale="0.3 0.3 0.3"
+>
+<a-entity
+    gltf-model="#Ambulance"
+    position="-10.0 0 -10"
+    rotation="0 45 0"
+    scale="0.3 0.3 0.3"
+>
+<a-entity
+    gltf-model="#HRoom"
+    position="-1.0 0 -10"
+    rotation="0 45 0"
+    scale="0.3 0.3 0.3"
+>
+</a-entity>
         </a-scene>
     </body>
 </html>
